@@ -9,7 +9,7 @@ st.title('DISEASE OUTBREAK ANALYSIS')
 # Load data from Flask API
 @st.cache_data  # Use st.cache_data instead of st.cache
 def load_data():
-    response = requests.get('https://9069-122-172-86-216.ngrok-free.app/data')
+    response = requests.get('https://c4b2-122-172-86-216.ngrok-free.app/data')
     data_json = response.json()
     data = pd.DataFrame(data_json)
     data['Date'] = pd.to_datetime(data[['Year', 'Month']].assign(day=1))
@@ -39,6 +39,7 @@ st.plotly_chart(fig_cases_deaths)
 # Display current status with larger font sizeb
 latest_status = country_data['Status'].iloc[-1]
 status_label = label_encoder.inverse_transform([latest_status])[0]
+
 
 st.header(f'THE LATEST OUTBREAK STATUS FOR {country.upper()} IS:')
 st.markdown(
