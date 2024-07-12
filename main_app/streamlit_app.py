@@ -40,16 +40,16 @@ st.plotly_chart(fig_cases_deaths)
 # latest_status = country_data['Status'].iloc[-1]
 # status_label = label_encoder.inverse_transform([latest_status])[0]
 status = {
-    "Italy":"EMERGENCE",
-    "Liberia":"PANDEMIC",
-    "Mali":"EPIDEMIC",
-    "Nigeria":"EPIDEMIC",
-    "Senegal":"EMERGENCE",
-    "Sierra Leone":"PANDEMIC",
-    "Spain":"EMERGENCE",
-    "United Kingdom":"EMERGENCE",
-    "United States of America":"EMERGENCE",
-    "Guinea":"PANDEMIC",
+    "Italy".upper():"EMERGENCE",
+    "Liberia".upper():"PANDEMIC",
+    "Mali":.upper()"EPIDEMIC",
+    "Nigeria".upper():"EPIDEMIC",
+    "Senegal".upper():"EMERGENCE",
+    "Sierra Leone".upper():"PANDEMIC",
+    "Spain".upper():"EMERGENCE",
+    "United Kingdom".upper():"EMERGENCE",
+    "United States of America".upper():"EMERGENCE",
+    "Guinea".upper():"PANDEMIC",
 }
 status_label = status[country.upper()]
 
