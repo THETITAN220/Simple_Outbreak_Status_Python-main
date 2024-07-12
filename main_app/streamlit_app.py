@@ -18,7 +18,7 @@ def load_data():
 data = load_data()
 
 # Load label encoder
-label_encoder = joblib.load('label_encoder.pkl')
+# label_encoder = joblib.load('label_encoder.pkl')
 
 # Select country
 country = st.selectbox('SELECT COUNTRY', data['Country'].unique())
