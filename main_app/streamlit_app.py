@@ -42,7 +42,7 @@ st.plotly_chart(fig_cases_deaths)
 status = {
     "Italy".upper():"EMERGENCE",
     "Liberia".upper():"PANDEMIC",
-    "Mali":.upper()"EPIDEMIC",
+    "Mali".upper():"EPIDEMIC",
     "Nigeria".upper():"EPIDEMIC",
     "Senegal".upper():"EMERGENCE",
     "Sierra Leone".upper():"PANDEMIC",
