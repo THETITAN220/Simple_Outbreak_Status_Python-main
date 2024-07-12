@@ -37,9 +37,21 @@ fig_cases_deaths.update_layout(title=f'Ebola Cases and Deaths Over Time in {coun
 st.plotly_chart(fig_cases_deaths)
 
 # Display current status with larger font sizeb
-latest_status = country_data['Status'].iloc[-1]
-status_label = label_encoder.inverse_transform([latest_status])[0]
-
+# latest_status = country_data['Status'].iloc[-1]
+# status_label = label_encoder.inverse_transform([latest_status])[0]
+status = {
+    "Italy":"EMERGENCE",
+    "Liberia":"PANDEMIC",
+    "Mali":"EPIDEMIC",
+    "Nigeria":"EPIDEMIC",
+    "Senegal":"EMERGENCE",
+    "Sierra Leone":"PANDEMIC",
+    "Spain":"EMERGENCE",
+    "United Kingdom":"EMERGENCE",
+    "United States of America":"EMERGENCE",
+    "Guinea":"PANDEMIC",
+}
+status_label = status[country.upper()]
 
 st.header(f'THE LATEST OUTBREAK STATUS FOR {country.upper()} IS:')
 st.markdown(
