@@ -9,7 +9,7 @@ st.title('DISEASE OUTBREAK ANALYSIS')
 # Load data from Flask API
 @st.cache_data  # Use st.cache_data instead of st.cache
 def load_data():
-    response = requests.get('https://c4b2-122-172-86-216.ngrok-free.app/data')
+    response = requests.get('https://a22f-2405-201-d023-a972-28df-ff27-6fc6-c274.ngrok-free.app/data')
     data_json = response.json()
     data = pd.DataFrame(data_json)
     data['Date'] = pd.to_datetime(data[['Year', 'Month']].assign(day=1))
